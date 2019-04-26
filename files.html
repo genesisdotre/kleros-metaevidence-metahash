@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Kleros - MetaEvidence MetaHash</title>
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+  </head>
+  <body>
+  <div class="pure-g">
+
+        <h1>IPFS upload via Infura</h1>
+
+
+        <h1>IPFS upload</h1>
+              
+        
+        
+        
+        <h1>Filestack upload</h1>
+              
+        
+        
+        <h1>Archon - MetaEvidence MetaHash suite (open console)</h1>
+
+        https://github.com/kleros/archon/issues/18#issuecomment-486718969
+
+        <pre>evidenceHash = "Bce1WTQa7bfrJMFdEJuWV2xHsmj5JcDDyqBKGXu6PHZsn5e5oxkJ8cMJcuFDK1VsQYBtfrzgWkKCovWSvsacgN1XTj";
+
+var evidenceJSON = {
+  fileURI: "https://s3.us-east-2.amazonaws.com/kleros-examples/exampleEvidence.txt",
+  fileHash: evidenceHash,
+  name: "Example Evidence",
+  description: "This evidence shows how to properly utilize hashing and Archon to submit valid evidence!"
+}
+
+var evidenceJSONHash = archon.utils.multihashFile(
+  evidenceJSON,
+  0x1B // keccak-256
+)
+
+console.log(evidenceJSONHash);</pre>        
+
+        
+    
+        <h3>Simplicity and adoption</h3>
+        
+        <p>I write code that will be read by other humans.</p>
+        
+        <p>Short attention span - I need to understand quickly.</p>
+        
+        <p>Coding on my laptop, no external screen, less lines must do the job.</p>
+        
+        <p>Often asking for help - it must run  standalone in the browser.</p>
+        
+        
+        
+        <h3>Yak shaving and bikeshedding</h3>
+        
+        https://seths.blog/2005/03/dont_shave_that/
+        
+        https://en.wikipedia.org/wiki/Bikeshedding
+        
+        https://twitter.com/peakscale/status/552985151794208769
+        
+        
+        
+        <h3>Rocket science / alien technology</h3>
+        
+        <p>If you are Vitalik nerd type of guy (or girl, or them) - I'm informing you there is a balance with the real world outside</p>
+        
+        <p>Most of the programmers in the future wikll be are coming from coding bootcamps.</p>
+        
+        <p>Do you know what does it mean? 3 months of pracice, some basic HTML.</p></Do>
+        
+        <p>Your genius code should have a easily runnable demo and a sales pitch: why is this important?</p>
+        
+        <h3>Thank you</h3>
+        
+        <p>Vasa from GitHub, StackOverflow, <a href="https://discuss.ipfs.io/t/is-there-any-other-methods-to-upload-a-file-files-to-ipfs-through-a-web-browser-beside-using-api-port-5001/3143/10?u=mars">IPFS forum</a> for sorting me out with IPFS upload.</p>
+        
+        <p>Kleros team for bearing with my 50+ GitHub issues (and counting). If the product was crap I wouldn't bother. Because it is good and team is solid I think that we can do even better.</p>
+  </div>
+  </body>
+</html>
