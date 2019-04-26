@@ -1,3 +1,11 @@
+# Everything Else
+
+https://en.wikipedia.org/wiki/WTFPL
+
+But remember immutable laws of the universe are still in play.
+
+# CSS Layout
+
 Software License Agreement (BSD License)
 ========================================
 
