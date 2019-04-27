@@ -5,7 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="A layout example that shows off a blog page with a list of posts.">
     <title>Blog &ndash; Layout Examples &ndash; Pure</title>
-    
+
+
+    <meta property="og:title" content="COP24 - United Nations Climate Chance Conference"/>
+    <meta property="og:image" content="https://genesis.re/360/cop24/preview.jpg"/>
+    <meta property="og:site_name" content=""/>
+    <meta property="og:description" content=""/>
+
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@michalstefanow">
+    <meta name="twitter:creator" content="@marsxrobertson">
+    <meta name="twitter:title" content="COP24 - United Nations Climate Chance Conference">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="https://genesis.re/360/cop24/preview.jpg">
+
     <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-" crossorigin="anonymous">
     
     <!--[if lte IE 8]>
@@ -36,13 +50,13 @@
             <nav class="nav">
                 <ul class="nav-list">
                     <li class="nav-item">
-                        <a class="pure-button" href="https://github.com/ethereum/EIPs/issues/792">ERC 792: Arbitration Standard</a>
+                        <a class="pure-button" href="https://github.com/ethereum/EIPs/issues/792">ERC 792:<br>Arbitration<br>Standard</a>
                     </li>
                     <li class="nav-item">
-                        <a class="pure-button" href="https://github.com/ethereum/EIPs/issues/1497">ERC 1497: Evidence Standard</a>
+                        <a class="pure-button" href="https://github.com/ethereum/EIPs/issues/1497">ERC 1497:<br>Evidence<br>Standard</a>
                     </li>
                     <li class="nav-item">
-                        <a class="pure-button" href="https://gitcoin.co/hackathon/ethhack2019/">Ethereal Virtual Hackathon</a>
+                        <a class="pure-button" href="https://gitcoin.co/hackathon/ethhack2019/">Ethereal<br>Virtual<br>Hackathon</a>
                     </li>
                 </ul>
             </nav>
@@ -63,13 +77,13 @@
                     <h2 class="post-title">IPFS via Infura</h2>
 
                     <p class="post-meta">
-                        By <a class="post-author" href="https://marsrobertson.com">Mars Robertson</a> and <a href="https://vaibhavsaini.com">Vasa</a> under <span class="post-category post-category-js" href="#">CORS</a>
+                        By <a class="post-author" href="https://marsrobertson.com">Mars Robertson</a> and <a href="https://vaibhavsaini.com">Vasa</a> under <span class="post-category post-category-js" href="#">DON'T</a>
                     </p>
                 </header>
 
                 <div class="post-description">
                     <p>
-                        Check <a href="standalone/filepicker.html">standalone/filepicker.html</a>
+                        Check <a href="standalone/ipfs-infura.html">standalone/ipfs-infura.html</a>
                     </p>
                 </div>
             </section>
@@ -83,7 +97,7 @@
                     <h2 class="post-title">IPFS via ClusterLabs</h2>
 
                     <p class="post-meta">
-                        By <a href="https://vaibhavsaini.com">Vasa</a> under <span class="post-category post-category-js" href="#">CORS</a>
+                        By <a href="https://vaibhavsaini.com">Vasa</a> under <span class="post-category post-category-pure" href="#">SHAVE</a>
                     </p>
                 </header>
 
@@ -102,7 +116,7 @@
                         <h2 class="post-title">FileStack (ex FilePicker)</h2>
     
                         <p class="post-meta">
-                            By <a class="post-author" href="https://marsrobertson.com">Mars Robertson</a> under <span class="post-category post-category-js" href="#">CORS</a>
+                            By <a class="post-author" href="https://marsrobertson.com">Mars Robertson</a> under <span class="post-category post-category-design" href="#">THAT</a>
                         </p>
                     </header>
     
@@ -122,14 +136,27 @@
                         <h2 class="post-title">Archon</h2>
     
                         <p class="post-meta">
-                            By <a href="post-author" href="https://kleros.io">Kleros</a> and <a class="post-author" href="https://github.com/satello">Sam Vitello</a> and under <span class="post-category post-category-js" href="#">CORS</a>
+                            By <a class="post-author" href="https://github.com/satello">Sam Vitello</a> and under <span class="post-category post-category-yui" href="#">YAK</a>
                         </p>
                     </header>
-
-                    <p>Archon provides functionality for Arbitrator and Arbitrable Ethereum smart contracts as defined in ERC 792. Normally installed as node package, bundled to run in a browser thanks to  <a href="https://github.com/kleros/archon/issues/18#issuecomment-486718969">this issue</a>.
-                    Open the console and keep rolling!</p>
     
                     <div class="post-description">
+                    
+                        <p>Archon provides functionality for Arbitrator and Arbitrable Ethereum smart contracts as defined in ERC 792. Normally installed as node package, bundled to run in a browser thanks to  <a href="https://github.com/kleros/archon/issues/18#issuecomment-486718969">this issue</a>.
+                                Open the console and keep rolling!</p>
+
+<script>
+    var archon = new Archon('https://mainnet.infura.io')
+    console.log(archon.version)
+
+    var evidenceHash = Archon.utils.multihashFile(
+        "xxxxxxxx",
+        0x1B // keccak-256
+    );
+
+    Archon.utils.validMultihash(evidenceHash, "xxxxxxxx") // true
+</script>                                
+
 <pre>var archon = new Archon('https://mainnet.infura.io')
 
 evidenceHash = "Bce1WTQa7bfrJMFdEJuWV2xHsmj5JcDDyqBKGXu6PHZsn5e5oxkJ8cMJcuFDK1VsQYBtfrzgWkKCovWSvsacgN1XTj";
@@ -149,14 +176,66 @@ var evidenceJSONHash = archon.utils.multihashFile(
 console.log(evidenceJSONHash);</pre>
                     </div>
             </section>
+
+            <section class="post">
+                    <header class="post-header">
+                        <img width="48" height="48" alt="Mars Robertson" class="post-avatar" src="img/mars.jpg">
+                        
+                        <h2 class="post-title">Closing remarks (simplicity and adoption)</h2>
+    
+                        <p class="post-meta">
+                            By <a class="post-author" href="https://marsrobertson.com">Mars Robertson</a>
+                        </p>
+                    </header>
+    
+                    <div class="post-description">
+        
+                            <p>Short attention span - code needs to understood quickly.</p>
+                            
+                            <p>Coding on my laptop, no external screen, less lines must do the job.</p>
+                            
+                            <p>Often asking for help - it must run standalone in the browser.</p>
+                            
+                          
+                            <h3>Yak shaving and bikeshedding</h3>
+                            <p>Focusing on the essentials instead.</p>
+                            
+                            <ul>
+                                <li><a href="https://seths.blog/2005/03/dont_shave_that/">Yak shaving</a></li>
+                                <li><a href="https://en.wikipedia.org/wiki/Bikeshedding">Bikeshedding</a></li>
+                                <li><a href="https://twitter.com/peakscale/status/552985151794208769">Bike shaving</a></li>
+                             </ul>
+
+                            <img src="img/bikeshaving.jpg">
+                            
+                            
+                            
+                            <h3>Rocket science / alien technology</h3>
+                            
+                            <p>If you are Vitalik nerd type of guy <i>(or girl, or them, or any non-binary quantum superposition)</i> - I'm informing you there is a balance with the real world outside.</p>
+                            
+                            <p>Most of the programmers in the future wikll be are coming from coding bootcamps.</p>
+                            
+                            <p>Do you know what does it mean? 3 months of pracice, some basic HTML.</p></Do>
+                            
+                            <p>Your genius code should have a easily runnable demo and a sales pitch: why is this important?</p>
+                            
+                            <h3>Thank you</h3>
+                            
+                            <p>Vasa from GitHub, StackOverflow, <a href="https://discuss.ipfs.io/t/is-there-any-other-methods-to-upload-a-file-files-to-ipfs-through-a-web-browser-beside-using-api-port-5001/3143/10?u=mars">IPFS forum</a> for sorting me out with IPFS upload.</p>
+                            
+                            <p>Kleros team for bearing with my 50+ GitHub issues (and counting). If the product was crap I wouldn't bother. Because it is good and team is solid I think that we can do even better.</p>
+                    </div>
+            </section>
         </div>
 
         <div class="footer">
             <div class="pure-menu pure-menu-horizontal">
                 <ul>
-                    <li class="pure-menu-item"><a href="http://purecss.io/" class="pure-menu-link">About</a></li>
-                    <li class="pure-menu-item"><a href="http://twitter.com/yuilibrary/" class="pure-menu-link">Twitter</a></li>
-                    <li class="pure-menu-item"><a href="http://github.com/pure-css/pure/" class="pure-menu-link">GitHub</a></li>
+                    
+                    <li class="pure-menu-item"><a href="http://twitter.com/marsXrobertson/" class="pure-menu-link">Twitter</a></li>
+                    <li class="pure-menu-item"><a href="http://github.com/marsrobertson/" class="pure-menu-link">GitHub</a></li>
+                    <li class="pure-menu-item"><a href="http://purecss.io/" class="pure-menu-link">Design by PureCSS</a></li>
                 </ul>
             </div>
         </div>

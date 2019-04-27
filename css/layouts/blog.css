@@ -97,13 +97,22 @@ h3 {
     color: #222;
     margin-bottom: 0.2em;
 }
+
+h3  {
+    font-size: 1.4em;
+    color: #222;
+    margin-bottom: 0.2em;
+    font-weight: bold;
+}
+
+
 .post-avatar {
     border-radius: 50px;
     float: right;
     margin-left: 0.4em;
 }
 .post-description {
-    font-family: Georgia, "Cambria", serif;
+    /* font-family: Georgia, "Cambria", serif; WTF */
     color: #444;
     line-height: 1.8em;
 }
